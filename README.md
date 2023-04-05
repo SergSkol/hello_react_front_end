@@ -92,6 +92,10 @@ Install this project with:
 ```sh
   npm install
 ```
+
+Follow the link to Rails back-end repo (https://github.com/SergSkol/hello_rails_back_end)
+Then follow the instructions in back-end's README to install and run it.
+
 ### Usage <a name="usage"></a>
 
 To run the project, execute the following command:
