@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { fetchGreeting } from './redux/actions';
+import PropTypes from 'prop-types';
+import fetchGreeting from './redux/actions';
 
 function Greeting({ greeting, fetchGreeting }) {
   useEffect(() => {
@@ -15,5 +16,14 @@ function Greeting({ greeting, fetchGreeting }) {
 }
 
 const mapStateToProps = (state) => ({ greeting: state.greeting });
+
+Greeting.propTypes = {
+  greeting: PropTypes.arrayOf(
+    PropTypes.shape({
+      message: PropTypes.string,
+    }),
+  ).isRequired,
+  fetchGreeting: PropTypes.func.isRequired,
+};
 
 export default connect(mapStateToProps, { fetchGreeting })(Greeting);
